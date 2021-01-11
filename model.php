@@ -22,7 +22,7 @@ function getProduits(){
 
 function getClient($id){
 	$db = dbConnect();
-	$req = $db->prepare('SELECT * FROM client WHERE id = ?');
+	$req = $db->prepare('SELECT * FROM client WHERE CodeClient = ?');
 	$req->execute(array($id));
 
 	$client = $req->fetch();
@@ -45,4 +45,15 @@ function getClients(){
     $req->execute(array());
 
     return $req;
+function verifClient_ID($id){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT COUNT(*) AS nb FROM client WHERE CodeClient = ?');
+	$req->execute(array($id));
+
+	$res = $req->fetch();
+	if($res['nb'] == 1){
+		return true;
+	}
+	else
+		return false;
 }
