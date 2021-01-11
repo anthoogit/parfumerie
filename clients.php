@@ -36,7 +36,7 @@ $req = getClients();
 			?>
 
 				<tr>
-					<td><?= $client['CodeClient'] ?></td>
+					<td><a href="profil_client.php?client_id=<?=$client['CodeClient']?>"><?= $client['CodeClient'] ?></a></td>
 					<td><?= $client['nom'] ?></td>
 					<td><?= $client['prenom'] ?></td>
 					<td><?= $client['adresse'] ?></td>
