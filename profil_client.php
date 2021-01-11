@@ -21,16 +21,21 @@ require('model.php');
 
 <?php
 if (isset($_GET["client_id"])){
-	$client = getclient($_GET["client_id"]);
+	$client_id = $_GET["client_id"];
+	if (verifClient_ID($client_id)){
+		$client = getclient($client_id);
 	?>
 
-	<?= "Nom : " . $client["CodeClient"]; ?>
+	<?= "Code client : " . $client["CodeClient"]; ?>
+	<?= "Nom : " . $client["nom"]; ?>
+	<?= "Prénom : " . $client["prenom"]; ?>
+	<?= "Adresse : " . $client["adresse"]; ?>
+	<?= "facebook : " . $client["facebook"]; ?>
 
-<?php
+	<?php
+	}
 }
 ?>
-
-	
 
 
 </body>
