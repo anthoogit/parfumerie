@@ -31,6 +31,12 @@ if (isset($_GET["client_id"])){
 	<?= "Prénom : " . $client["prenom"]; ?>
 	<?= "Adresse : " . $client["adresse"]; ?>
 	<?= "facebook : " . $client["facebook"]; ?>
+	<?= "instagram : " . $client["instagram"]; ?>
+	<?= "email : " . $client["email"]; ?>
+	<?= "numeroTel : " . $client["numeroTel"]; ?>
+	<?= "nbPoints : " . $client["nbPoints"]; ?>
+	<?= "id_membership : " . $client["id_membership"]; ?>
+	<?= "dateExpiration : " . $client["dateExpiration"]; ?>
 
 	<?php
 	}
