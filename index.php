@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
-<img src="logo.png">
-	<div class="topnav">
-	
-	  <a class="active" href="#Accueil">Accueil</a>
-	  <a href="#news">Boutique</a>
-	  <a href="#contact">Les cadeaux</a>
-	  <a href="#about">Votre Compte</a>
-	</div>
-
-
 	<meta charset="utf-8">
 	<title>Accueil</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -21,6 +9,8 @@
 </head>
 
 <body>
+<?php require('header.php'); ?>
+
 	<h1>Accueil</h1>
     <a href="produits.php">Produits</a><br/>
 	<a href="profil_client">Profil client</a><br/>
