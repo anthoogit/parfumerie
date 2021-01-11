@@ -29,3 +29,11 @@ function getClient($id){
 
 	return $client;
 }
+
+function getCadeau(){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT * FROM cadeau');
+	$req->execute(array());
+
+	return $req;
+}
