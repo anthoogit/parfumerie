@@ -38,13 +38,14 @@ function getCadeau(){
 	return $req;
 }
 
-
 function getClients(){
     $db = dbConnect();
     $req = $db->prepare('SELECT * FROM client');
     $req->execute(array());
 
-    return $req;
+	return $req;
+}
+
 function verifClient_ID($id){
 	$db = dbConnect();
 	$req = $db->prepare('SELECT COUNT(*) AS nb FROM client WHERE CodeClient = ?');
