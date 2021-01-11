@@ -15,6 +15,7 @@ $req = getProduits();
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
+	<h1 class="titre_principal"><span>Produits</span></h1>
 	<p>
 		<table>
 			<thead>

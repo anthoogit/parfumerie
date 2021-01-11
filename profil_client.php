@@ -14,7 +14,7 @@ require('model.php');
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
-	<h3 class="titre_principal"><span>Mon profil</span></h3>
+	<h1 class="titre_principal"><span>Mon profil</span></h1>
 	<form action="" method="GET">
 		<label for="client_id">ID Client</label>
 		<input type="text" name="client_id" id="client_id" />
@@ -58,7 +58,7 @@ require('model.php');
 				?>
 				</ul>
 				<p><a href="#">Suivre mes commandes</a></p>
-				<p><a href="#">Mes dernières commandes</a></p>
+				<p><a href="#">Demander de l'aide</a></p>
 				<p><a href="#">Faire un retour</a></p>
 
 				<p>Posez vos questions sur nos réseaux :</p>

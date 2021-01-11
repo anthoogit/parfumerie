@@ -109,11 +109,12 @@ tbody tr:last-of-type {
 .titre_principal{
   text-align: center;
   color: white;
+  margin-bottom: 75px;
 }
 
 .titre_principal span{
   background-color: #914c69;
-  padding: 10px;
+  padding: 10px 50px;
   border-radius: 10px;
 }
 

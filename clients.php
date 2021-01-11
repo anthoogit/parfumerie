@@ -14,7 +14,7 @@ $req = getClients();
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
-	<h1>Liste des clients</h1><br/><br/>
+	<h1 class="titre_principal"><span>Liste des clients</span></h1>
 
 	<table>
 		<thead>
