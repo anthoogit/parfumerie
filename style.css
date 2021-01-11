@@ -62,3 +62,42 @@ body {
    margin: 0px; 
    font-family: Verdana;
 }
+
+h1 {
+  margin: 15px;
+}
+
+table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+  margin: 15px;
+  padding : 10px;
+}
+
+th, td {
+  text-align: center;
+}
+
+table {
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: #584467;
+  color: #ffffff;
+}
+
+
+tbody tr {
+  border-bottom: 1px solid #b9b9b9;
+}
+
+tbody tr {
+  background-color: #fdfdfd;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #584467;
+}
