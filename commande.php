@@ -14,7 +14,7 @@ require('model.php');
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
-	<h3 class="titre_principal">Mes commandes</h3>
+	<h3 class="titre_principal"><span>Mes commandes</span></h3>
 	<form action="" method="GET">
 		<label for="commande_id">ID Commande</label>
 		<input type="text" name="commande_id" id="commande_id" />

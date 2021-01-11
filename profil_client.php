@@ -14,7 +14,7 @@ require('model.php');
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
-	<h3 class="titre_principal">Mon profil</h3>
+	<h3 class="titre_principal"><span>Mon profil</span></h3>
 	<form action="" method="GET">
 		<label for="client_id">ID Client</label>
 		<input type="text" name="client_id" id="client_id" />

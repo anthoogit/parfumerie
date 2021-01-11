@@ -12,7 +12,7 @@
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
-	<h1>Accueil</h1>
+	<h1 class="titre_principal"><span>Accueil</span></h1>
 	<a href="produits.php">Produits</a><br/>
 	<a href="profil_client.php?client_id=1">Profil client</a><br/>
 	<a href="clients.php">Clients</a><br/>
