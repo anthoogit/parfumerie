@@ -37,3 +37,12 @@ function getCadeau(){
 
 	return $req;
 }
+
+
+function getClients(){
+    $db = dbConnect();
+    $req = $db->prepare('SELECT * FROM client');
+    $req->execute(array());
+
+    return $req;
+}
