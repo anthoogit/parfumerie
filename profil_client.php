@@ -11,6 +11,7 @@ require('model.php');
 </head>
 
 <body>
+<?php require('header.php'); ?>
 
 <h3>Produits</h3>
 <form action="" method="GET">
@@ -26,19 +27,25 @@ if (isset($_GET["client_id"])){
 		$client = getclient($client_id);
 	?>
 
-	<?= "Code client : " . $client["CodeClient"]; ?>
-	<?= "Nom : " . $client["nom"]; ?>
-	<?= "Prénom : " . $client["prenom"]; ?>
-	<?= "Adresse : " . $client["adresse"]; ?>
-	<?= "facebook : " . $client["facebook"]; ?>
-	<?= "instagram : " . $client["instagram"]; ?>
-	<?= "email : " . $client["email"]; ?>
-	<?= "numeroTel : " . $client["numeroTel"]; ?>
-	<?= "nbPoints : " . $client["nbPoints"]; ?>
-	<?= "id_membership : " . $client["id_membership"]; ?>
-	<?= "dateExpiration : " . $client["dateExpiration"]; ?>
+	<h3>Mes Informations</h3>
+	<p>
+		<?= "Code client : " . $client["CodeClient"]; ?><br />
+		<?= "Nom : " . $client["nom"]; ?><br />
+		<?= "Prénom : " . $client["prenom"]; ?><br />
+		<?= "Adresse : " . $client["adresse"]; ?><br />
+		<?= "facebook : " . $client["facebook"]; ?><br />
+		<?= "instagram : " . $client["instagram"]; ?><br />
+		<?= "email : " . $client["email"]; ?><br />
+		<?= "numeroTel : " . $client["numeroTel"]; ?><br />
+		<?= "nbPoints : " . $client["nbPoints"]; ?><br />
+		<?= "id_membership : " . $client["id_membership"]; ?><br />
+		<?= "dateExpiration : " . $client["dateExpiration"]; ?><br />
+	</p>
 
 	<?php
+	}
+	else{
+
 	}
 }
 ?>
