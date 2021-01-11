@@ -49,6 +49,12 @@ require('model.php');
 				<h3 class="titre_orange">Mes Commandes</h3>
 
 				<p>Mes dernières commandes</p>
+				<?php
+				$req = getCommandesClient($client_id);
+				while ($commande = $req->fetch()){
+					echo '<p><a href="commande.php?commande_id=' . $commande["noCommande"] . '">' . $commande["noCommande"] . ' - '. $commande["dateCommande"] . '</a></p>';
+				}
+				?>
 				<p><a href="#">Suivre mes commandes</a></p>
 				<p><a href="#">Mes dernières commandes</a></p>
 				<p><a href="#">Faire un retour</a></p>

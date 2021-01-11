@@ -58,3 +58,32 @@ function verifClient_ID($id){
 	else
 		return false;
 }
+
+function verifCommande_ID($commande_id){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT COUNT(*) AS nb FROM commande WHERE noCommande = ?');
+	$req->execute(array($commande_id));
+
+	$res = $req->fetch();
+	if($res['nb'] == 1){
+		return true;
+	}
+	else
+		return false;
+}
+
+function getCommandesClient($client_id){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT noCommande, dateCommande FROM commande WHERE CodeClient = ?');
+    $req->execute(array($client_id));
+
+	return $req;
+}
+
+function getCommande($commande_id){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT * FROM commande WHERE noCommande = ?');
+    $req->execute(array($commande_id));
+
+	return $req;
+}
