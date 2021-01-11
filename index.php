@@ -4,8 +4,9 @@
 
 
 <head>
-
+<img src="logo.png">
 	<div class="topnav">
+	
 	  <a class="active" href="#Accueil">Accueil</a>
 	  <a href="#news">Boutique</a>
 	  <a href="#contact">Les cadeaux</a>
