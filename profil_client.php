@@ -2,15 +2,36 @@
 require('model.php');
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Mon profil</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
 <h3>Produits</h3>
 <form action="" method="GET">
 	<label for="client_id">ID Client</label>
 	<input type="text" name="client_id" id="client_id" />
 	<input type="submit" value="Valider" />
 </form>
-<p>
 
+<?php
+if (isset($_GET["client_id"])){
 	$client = getclient($_GET["client_id"]);
+	?>
 
-</p>
-</div>
+	<?= "Nom : " . $client["CodeClient"]; ?>
+
+<?php
+}
+?>
+
+	
+
+
+</body>
+</html>
