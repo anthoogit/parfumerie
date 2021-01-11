@@ -12,36 +12,39 @@ $req = getProduits();
 </head>
 
 <body>
-<h3>Produits</h3>
-<p>
-	<table>
-		<thead>
-			<tr>
-				<th>noProduit</th>
-				<th>nom</th>
-				<th>prixUnitaire</th>
-				<th>stock</th>
-			</tr>
-		</thead>
+<?php require('header.php'); ?>
 
-		<tbody>
-			<?php
-			while ($produit = $req->fetch()) {
-			?>
-
+<div id="bloc_page">
+	<p>
+		<table>
+			<thead>
 				<tr>
-					<td><?= $produit['noProduit'] ?></td>
-					<td><?= $produit['nom'] ?></td>
-					<td><?= $produit['prixUnitaire'] ?></td>
-					<td><?= $produit['stock'] ?></td>
+					<th>noProduit</th>
+					<th>nom</th>
+					<th>prixUnitaire</th>
+					<th>stock</th>
 				</tr>
-			<?php
-			}
-			?>
-		</tbody>
-	</table>
-</p>
+			</thead>
+
+			<tbody>
+				<?php
+				while ($produit = $req->fetch()) {
+				?>
+
+					<tr>
+						<td><?= $produit['noProduit'] ?></td>
+						<td><?= $produit['nom'] ?></td>
+						<td><?= $produit['prixUnitaire'] ?></td>
+						<td><?= $produit['stock'] ?></td>
+					</tr>
+				<?php
+				}
+				?>
+			</tbody>
+		</table>
+	</p>
 </div>
 
+<?php require('footer.php'); ?>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div>
-            <p>Suiver-nous sur nos réseaux :</p>
+            <p>Suivez-nous sur nos réseaux :</p>
             <p> images réseaux</p>
             <br>
             <br>

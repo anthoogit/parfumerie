@@ -11,6 +11,9 @@ $req = getClients();
 </head>
 
 <body>
+<?php require('header.php'); ?>
+
+<div id="bloc_page">
 	<h1>Liste des clients</h1><br/><br/>
 
 	<table>
@@ -53,7 +56,8 @@ $req = getClients();
 			?>
 		</tbody>
 	</table>
+</div>
 
-    
+<?php require('footer.php'); ?>
 </body>
 </html>
