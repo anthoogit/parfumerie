@@ -1,17 +1,8 @@
 <?php
 require('model.php');
-$req = getProduits();
+$client = getclient();
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Accueil</title>
-	<link rel="stylesheet" type="text/css" href="public/css/style.css">
-</head>
-
-<body>
 <h3>Produits</h3>
 <p>
 	<table>
@@ -26,7 +17,7 @@ $req = getProduits();
 
 		<tbody>
 			<?php
-			while ($produit = $req->fetch()) {
+			while ($client = $req->fetch()) {
 			?>
 
 				<tr>
@@ -42,6 +33,3 @@ $req = getProduits();
 	</table>
 </p>
 </div>
-
-</body>
-</html>

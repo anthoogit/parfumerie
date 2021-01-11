@@ -9,5 +9,6 @@
 <body>
 	<h1>Accueil</h1>
     <a href="produits.php">Produits</a>
+    <a href="client.php">Client</a>
 </body>
 </html>
