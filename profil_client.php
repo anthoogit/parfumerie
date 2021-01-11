@@ -12,6 +12,7 @@ require('model.php');
 
 <body>
 <?php require('header.php'); ?>
+
 <div id="bloc_page">
 	<h3 class="titre_principal">Mon profil</h3>
 	<form action="" method="GET">
@@ -27,30 +28,44 @@ require('model.php');
 			$client = getclient($client_id);
 		?>
 
-		<h3>Mes Informations</h3>
-		<p>
-			<?= "Code client : " . $client["CodeClient"]; ?><br />
-			<?= "Nom : " . $client["nom"]; ?><br />
-			<?= "Prénom : " . $client["prenom"]; ?><br />
-			<?= "Adresse : " . $client["adresse"]; ?><br />
-			<?= "facebook : " . $client["facebook"]; ?><br />
-			<?= "instagram : " . $client["instagram"]; ?><br />
-			<?= "email : " . $client["email"]; ?><br />
-			<?= "numeroTel : " . $client["numeroTel"]; ?><br />
-			<?= "nbPoints : " . $client["nbPoints"]; ?><br />
-			<?= "id_membership : " . $client["id_membership"]; ?><br />
-			<?= "dateExpiration : " . $client["dateExpiration"]; ?><br />
-		</p>
+		<div class="container">
+			<div>
+				<h3>Mes Informations</h3>
+				<p>
+					<?= "Code client : " . $client["CodeClient"]; ?><br />
+					<?= "Nom : " . $client["nom"]; ?><br />
+					<?= "Prénom : " . $client["prenom"]; ?><br />
+					<?= "Adresse : " . $client["adresse"]; ?><br />
+					<?= "facebook : " . $client["facebook"]; ?><br />
+					<?= "instagram : " . $client["instagram"]; ?><br />
+					<?= "email : " . $client["email"]; ?><br />
+					<?= "numeroTel : " . $client["numeroTel"]; ?><br />
+					<?= "nbPoints : " . $client["nbPoints"]; ?><br />
+					<?= "id_membership : " . $client["id_membership"]; ?><br />
+					<?= "dateExpiration : " . $client["dateExpiration"]; ?><br />
+				</p>
+			</div>
+			<div class="colonne_aside">
+				<h3 class="titre_orange">Mes Commandes</h3>
+
+				<p>Mes dernières commandes</p>
+				<p><a href="#">Suivre mes commandes</a></p>
+				<p><a href="#">Mes dernières commandes</a></p>
+				<p><a href="#">Faire un retour</a></p>
+
+				<p>Posez vos questions sur nos réseaux :</p>
+			</div>
+		</div>
 
 		<?php
 		}
 		else{
-
+			echo '<p>Code client inexistant</p>';
 		}
 	}
 	?>
 </div>
 
-
+<?php require('footer.php'); ?>
 </body>
 </html>

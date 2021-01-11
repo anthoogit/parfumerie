@@ -111,6 +111,36 @@ tbody tr:last-of-type {
   color: white;
   background-color: #914c69;
   padding: 10px;
-  
-  
+}
+
+.titre_orange{
+  text-align: center;
+  color: #FE8B88;
+}
+
+.container
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.colonne_aside{
+  background-color: #584467;
+  width: 35%;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+}
+
+.colonne_aside a{
+  color: white;
+}
+
+footer{
+  background-color: #584467;
+  color: white;
+}
+
+footer a{
+  color: white;
 }
