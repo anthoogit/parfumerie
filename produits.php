@@ -1,8 +1,17 @@
 <?php
-require('model/model.php');
+require('model.php');
 $req = getProduits();
 ?>
-<link rel="stylesheet" type="text/css" href="style.css">
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Accueil</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
 <h3>Produits</h3>
 <p>
 	<table>
@@ -33,3 +42,6 @@ $req = getProduits();
 	</table>
 </p>
 </div>
+
+</body>
+</html>

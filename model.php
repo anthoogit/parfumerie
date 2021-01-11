@@ -19,3 +19,21 @@ function getProduits(){
 
 	return $req;
 }
+
+function getClient($id){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT * FROM client WHERE id = ?');
+	$req->execute(array($id));
+
+	$client = $req->fetch();
+
+	return $client;
+}
+
+function getCadeau(){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT * FROM cadeau');
+	$req->execute(array());
+
+	return $req;
+}

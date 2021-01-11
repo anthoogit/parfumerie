@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Clients</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+<?php
+require('model.php');
+?>
 
-<body>
-	<h1>Liste des clients</h1>
-    <a href="produits.php">Produits</a>
-</body>
-</html>
+<h3>Produits</h3>
+<form action="" method="GET">
+</form>
+<p>
+
+	$client = getclient();
+
+</p>
+</div>
