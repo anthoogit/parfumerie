@@ -33,8 +33,16 @@ require('model.php');
 				<h3>Nom commande</h3>
 				<p>
 					<?= "noCommande : " . $commande["noCommande"]; ?><br />
-					<?= "dateCommande : " . $client["dateCommande"]; ?><br />
-					<?= "etatCommande : " . $client["etatCommande"]; ?><br />
+					<?= "dateCommande : " . $commande["dateCommande"]; ?><br />
+					<?= "etatCommande : " . $commande["etatCommande"]; ?><br />
+					<?= "nbPoints : " . $commande["nbPoints"]; ?><br />
+					<?= "prixTotal : " . $commande["prixTotal"]; ?><br />
+					<?= "numColis : " . $commande["numColis"]; ?><br />
+					<?= "dateArrivee : " . $commande["dateArrivee"]; ?><br />
+					<?= "datePaiement : " . $commande["datePaiement"]; ?><br />
+					<?= "fraisService : " . $commande["fraisService"]; ?><br />
+					<?= "promotion : " . $commande["promotion"]; ?><br />
+					<?= "codeClient : " . $commande["codeClient"]; ?><br />
 				</p>
 			</div>
 		</div>

@@ -83,7 +83,9 @@ function getCommandesClient($client_id){
 function getCommande($commande_id){
 	$db = dbConnect();
     $req = $db->prepare('SELECT * FROM commande WHERE noCommande = ?');
-    $req->execute(array($commande_id));
+	$req->execute(array($commande_id));
+	
+	$commande = $req->fetch();
 
-	return $req;
+	return $commande;
 }
