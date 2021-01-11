@@ -8,7 +8,7 @@ $req = getProduits();
 <head>
 	<meta charset="utf-8">
 	<title>Accueil</title>
-	<link rel="stylesheet" type="text/css" href="public/css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
