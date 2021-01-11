@@ -2,7 +2,7 @@
 require('model/model.php');
 $req = getProduits();
 ?>
-
+<link rel="stylesheet" type="text/css" href="style.css">
 <h3>Produits</h3>
 <p>
 	<table>
