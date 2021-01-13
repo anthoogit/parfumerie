@@ -3,8 +3,8 @@
 	<div class="topnav">
 	
 	    <a class="active" href="index.php">Accueil</a>
-	    <a href="produits.php">Boutique</a>
-	    <a href="pagecadeau.php">Les cadeaux</a>
-	    <a href="profil_client.php?client_id=1">Mon Compte</a>
+	    <a href="#news">Boutique</a>
+	    <a href="#contact">Les cadeaux</a>
+	    <a href="#about">Votre Compte</a>
 	</div>
 </header>
