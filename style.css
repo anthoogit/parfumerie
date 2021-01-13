@@ -9,6 +9,7 @@ header{
   margin: 0px;
   padding-top: 60px;
   background-color: #584467;
+  /*position: absolute;*/
   top: 0px;
   right:0%;
   left: 0;
@@ -159,4 +160,27 @@ footer a{
   #bloc_page{
     width: auto;
   }
+}
+
+.btntop {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.btntop a {
+  color: #f2f2f2;
+  font-size: 17px;
+  background-color: #914c69;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.40);
+  
+}
+
+/* Change the color of links on hover */
+.btntop a:hover {
+  background-color: #ddd;
+  color: black;
+  
 }
