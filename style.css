@@ -1,12 +1,14 @@
 /* Add a black background color to the top navigation */
 
+header{
+	background-color: #584467;
+}
 
 .topnav {
   overflow: hidden;
   margin: 0px;
   padding-top: 60px;
   background-color: #584467;
-  position: absolute;
   top: 0px;
   right:0%;
   left: 0;
@@ -18,6 +20,7 @@ img {
   padding: 5px;
 	width: 12%;
   position: above;
+  position: absolute;
 }
 
 
@@ -32,8 +35,10 @@ img {
   margin-left: 3%;
   position: relative;
   left: 20%;
+  margin-top: 0px;
+
  background-color: #914c69;
-  
+ 
 }
 
 /* Change the color of links on hover */
