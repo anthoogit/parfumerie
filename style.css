@@ -149,3 +149,9 @@ footer{
 footer a{
   color: white;
 }
+
+@media (max-width: 1260px){
+  #bloc_page{
+    width: auto;
+  }
+}
