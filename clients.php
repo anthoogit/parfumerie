@@ -26,7 +26,7 @@ $req = getClients();
 				<th>Facebook</th>
 				<th>Instagram</th>
 				<th>Email</th>
-				<th>Numéro tel.</th>
+				<th>Numéro téléphone</th>
 				<th>Points</th>
 				<th>Membership Title</th>
 				<th>Date Epiration</th>
