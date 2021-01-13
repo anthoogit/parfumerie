@@ -13,15 +13,27 @@ $req = getClients();
 <body>
 <?php require('header.php'); ?>
 
+
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Créer une nouvelle fiche client</span></h1>
 
-	<form action="action.php" method="post">
- 		<p>Nom: <input type="text" name="nom" /></p>
- 		<p>Prenom: <input type="text" name="prenom" /></p>
- 		<p><input type="submit" value="Ajouter"/></p>
-	</form>
-	
+	<table>
+		<thead>
+			<tr>
+				<th>Code Client</th>
+				
+			</tr>
+		</thead>
+
+		<tbody>
+			
+				<tr>
+					<td>rrrrr</td>
+					
+				</tr>
+		
+		</tbody>
+	</table>
 </div>
 
 <?php require('footer.php'); ?>
