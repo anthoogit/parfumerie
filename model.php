@@ -89,3 +89,11 @@ function getCommande($commande_id){
 
 	return $commande;
 }
+
+function getProduitsCommande($commande_id){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT * FROM produit_commande NATURAL JOIN produit WHERE noCommande = ?');
+	$req->execute(array($commande_id));
+
+	return $req;
+}

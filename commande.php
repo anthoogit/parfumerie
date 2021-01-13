@@ -26,13 +26,13 @@ require('model.php');
 		$commande_id = $_GET["commande_id"];
 		if (verifCommande_ID($commande_id)){
 			$commande = getCommande($commande_id);
+			$req_produits = getProduitsCommande($commande_id);
 		?>
 
 		<div class="container">
 			<div>
-				<h3>Nom commande</h3>
+				<h3><?= "noCommande : " . $commande["noCommande"]; ?></h3>
 				<p>
-					<?= "noCommande : " . $commande["noCommande"]; ?><br />
 					<?= "dateCommande : " . $commande["dateCommande"]; ?><br />
 					<?= "etatCommande : " . $commande["etatCommande"]; ?><br />
 					<?= "nbPoints : " . $commande["nbPoints"]; ?><br />
@@ -43,6 +43,24 @@ require('model.php');
 					<?= "fraisService : " . $commande["fraisService"]; ?><br />
 					<?= "promotion : " . $commande["promotion"]; ?><br />
 					<?= "codeClient : " . $commande["codeClient"]; ?><br />
+				</p>
+			</div>
+			<div>
+				<h3>Produit commandés :</h3>
+				<p>
+					<?php
+					$prixTotal = 0;
+					while ($produit = $req_produits->fetch()) {
+						$prixTotal += ($produit["prixAchat"] * $produit["quantite"]);
+					?>
+						<?= "Produit : " . $produit["nom"] ?><br />
+						<?= "Quantité : " . $produit["quantite"] ?><br />
+						<?= "Prix d'achat : " . $produit["prixAchat"] . "€" ?><br />
+						<p>----</p>
+					<?php
+					}
+					?>
+					<strong>Total : <?= $prixTotal . "€" ?></strong>
 				</p>
 			</div>
 		</div>
