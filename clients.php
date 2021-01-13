@@ -16,7 +16,7 @@ $req = getClients();
 <div>
 	<div class="btntop">
 		<a class="bouton" href="new-client.php" >Créer une nouvelle fiche client</a>
-	</span>
+	</div>
 </div>
 
 <div id="bloc_page">
