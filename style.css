@@ -143,6 +143,7 @@ tbody tr:last-of-type {
 footer{
   background-color: #584467;
   color: white;
+  padding: 20px;
 }
 
 footer a{
