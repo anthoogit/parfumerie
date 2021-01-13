@@ -74,7 +74,7 @@ function verifCommande_ID($commande_id){
 
 function getCommandesClient($client_id){
 	$db = dbConnect();
-    $req = $db->prepare('SELECT noCommande, dateCommande FROM commande WHERE CodeClient = ?');
+    $req = $db->prepare('SELECT noCommande, dateCommande, etatCommande FROM commande WHERE CodeClient = ?');
     $req->execute(array($client_id));
 
 	return $req;

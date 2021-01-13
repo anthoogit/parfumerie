@@ -64,7 +64,35 @@ require('model.php');
 				<p>Posez vos questions sur nos réseaux :</p>
 			</div>
 		</div>
+		<div>
+			<h3>Toute mes commandes</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>N° Commande</th>
+						<th>Date</th>
+						<th>État</th>
+					</tr>
+				</thead>
 
+				<tbody>
+					<?php
+					$req = getCommandesClient($client_id);
+					while ($commande = $req->fetch()){
+					?>
+
+						<tr>
+							<td><?= '<a href="commande.php?commande_id=' . $commande["noCommande"] . '">' . $commande["noCommande"] . '</a>' ?></td>
+							<td><?= $commande['dateCommande'] ?></td>
+							<td><?= $commande['etatCommande'] ?></td>
+						</tr>
+					<?php
+					}
+					?>
+				</tbody>
+			</table>
+		</div>
+			
 		<?php
 		}
 		else{

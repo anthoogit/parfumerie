@@ -45,8 +45,8 @@ require('model.php');
 					<?= "codeClient : " . $commande["codeClient"]; ?><br />
 				</p>
 			</div>
-			<div>
-				<h3>Produit commandés :</h3>
+			<div class="colonne_aside">
+				<h3 class="titre_orange">Produit commandés :</h3>
 				<p>
 					<?php
 					$prixTotal = 0;
