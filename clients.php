@@ -13,9 +13,12 @@ $req = getClients();
 <body>
 <?php require('header.php'); ?>
 
-<div class="btntop">
-<a class="bouton" href="new-client.php" >Créer une nouvelle fiche client<a>
-</div>
+<p>
+<span class="btntop"><a class="bouton" href="new-client.php" >Créer une nouvelle fiche client</a></span>
+</p>
+<p class="btntop">
+	<a class="bouton" href="new-client.php" >Créer une nouvelle fiche client<a>
+</p>
 
 
 <div id="bloc_page">
