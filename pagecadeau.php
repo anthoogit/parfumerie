@@ -1,5 +1,6 @@
 <?php
-require('model/model.php');
+session_start();
+require('model.php');
 $req = getProduits();
 ?>
 
