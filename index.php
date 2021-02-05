@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -11,13 +12,31 @@
 <body>
 <?php require('header.php'); ?>
 
+
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Accueil</span></h1>
-	<a href="produits.php">Produits</a><br/>
-	<a href="profil_client.php?client_id=1">Profil client</a><br/>
-	<a href="clients.php">Clients</a><br/>
-	<a href="pagecadeau.php">Cadeaux</a><br/>
-	<a href="commande.php">Info commande</a><br/>
+
+	<?php
+	 if(isset($_SESSION['loggedin'])){
+	 	if($_SESSION['loggedin'] && $_SESSION['loggedin'] == true){
+			$user = $_SESSION['username'];
+			
+			//récupérer nombre de points de l'utilisateur
+			$client = getclient($id_client['id_client']);
+			
+			// afficher un message
+			echo "<h2>Vous avez ".$client['nbPoints']." points !</h2><br/>";
+			echo '<a href="pagecadeau.php">Voir le catalogue de cadeaux</h2><br/><br/>';
+		}
+	} else {
+		echo "Connectez-vous pour accéder au large choix de cadeaux !<br/>";
+	}
+	?>
+
+	<a href="produits.php">Produits (à afficher que pour l'admin)</a><br/>
+	<a href="clients.php">Clients (à afficher que pour l'admin)</a><br/>
+	<a href="profil_client.php?client_id=1">Profil client (A DEPLACER DANS CLIENTS.PHP)</a><br/>
+	<a href="commande.php">Info commande (refaire une page où on aurait tte la liste + option de rechercher par ID)</a><br/>
 </div>
 
 <?php require('footer.php'); ?>
