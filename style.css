@@ -132,6 +132,7 @@ tbody tr:last-of-type {
 {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .colonne_aside{
@@ -183,4 +184,39 @@ footer a{
   background-color: #ddd;
   color: black;
   
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form {
+text-align: center;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+  background-color: #914c69;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+input[type=submit]:hover {
+  background-color: #ddd;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
 }
