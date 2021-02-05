@@ -1,6 +1,3 @@
-<?php
-require('model.php');
-?>
 
 <!DOCTYPE html>
 <html>
