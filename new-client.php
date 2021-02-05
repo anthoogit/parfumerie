@@ -11,6 +11,20 @@
 <?php 
 require('header.php'); 
 $req = getClients(); 
+
+if(isset($_GET['success'])){
+	if($_GET['success'] == true){
+		echo '<script>alert("Le client a bien été ajouté !")</script>';
+	}
+}
+
+if(isset($_GET['error'])){
+	if($_GET['error'] == "duplicate_codeclient"){
+		echo '<script>alert("Le code client existe déjà !")</script>';
+	} else if($_GET['error'] == "duplicate_login"){
+		echo '<script>alert("Le login existe déjà !")</script>';
+	}
+}
 ?>
 <script>
 	var check = function() {
@@ -28,7 +42,7 @@ $req = getClients();
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Créer une nouvelle fiche client</span></h1>
 
-	<form action="action.php" method="post">
+	<form action="new-client-process.php" method="POST">
 		<p>* indique qu'un champ est obligatoire</p>
 		<p>*Code client: <input type="text" name="codeclient" required></p>
 		<p>*Nom: <input type="text" name="nom" required></p>
@@ -42,7 +56,7 @@ $req = getClients();
 		 <p>*Mot de passe: <input type="password" name="mdp" id ="mdp" onkeyup='check();' required></p>
 		 <p>*Confirmation Mot de passe: <input type="password" name="confirm_mdp" id="confirm_mdp" onkeyup='check();' required></p>
 		 <span id='message'></span>
-		 <p><input type="submit" value="Ajouter"/></p>
+		 <p><input type="submit" name="submit_new_user" value="Ajouter"/></p>
 	</form>
 	
 </div>
