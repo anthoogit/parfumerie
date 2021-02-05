@@ -107,3 +107,21 @@ function getProduitsCommande($commande_id){
 
 	return $req;
 }
+
+function setClient($cc, $n, $p, $ad, $fb, $insta, $m, $tel){
+	$db = dbConnect();
+	$req = $db->prepare("INSERT INTO Client (CodeClient, nom, prenom, adresse, facebook, instagram, email, numeroTel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+	$req->execute(array($cc, $n, $p, $ad, $fb, $insta, $m, $tel));
+
+	return $req;
+
+}
+
+function setUser($lo, $pd, $cc){
+	$db = dbConnect();
+	$req = $db->prepare("INSERT INTO utilisateur (nom_utilisateur, mot_de_passe, id_client) VALUES (?, ?, ?)");
+	$req->execute(array($lo, $pd, $cc));
+
+	return $req;
+
+}
