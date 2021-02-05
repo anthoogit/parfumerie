@@ -1,5 +1,5 @@
-<?php
-require('model.php');
+<?php /*
+require('model.php');*/
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ require('model.php');
 <?php require('header.php'); ?>
 
 <div id="bloc_page">
-	<h1 class="titre_principal"><span>Mon profil</span></h1>
+	<h1 class="titre_principal"><span>Profil</span></h1>
 	<form action="" method="GET">
 		<label for="client_id">ID Client</label>
 		<input type="text" name="client_id" id="client_id" />
@@ -30,7 +30,7 @@ require('model.php');
 
 		<div class="container">
 			<div>
-				<h3>Mes Informations</h3>
+				<h3>Mes informations</h3>
 				<p>
 					<?= "Code client : " . $client["CodeClient"]; ?><br />
 					<?= "Nom : " . $client["nom"]; ?><br />
@@ -65,7 +65,7 @@ require('model.php');
 			</div>
 		</div>
 		<div>
-			<h3>Toute mes commandes</h3>
+			<h3>Toutes mes commandes</h3>
 			<table>
 				<thead>
 					<tr>
