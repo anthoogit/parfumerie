@@ -1,5 +1,6 @@
 <?php
-require('model.php');
+require('header.php');
+//require('model.php');
 $req = getClients();
 ?>
 <!DOCTYPE html>
@@ -11,7 +12,7 @@ $req = getClients();
 </head>
 
 <body>
-<?php require('header.php'); ?>
+
 
 <div>
 	<div class="btntop">
