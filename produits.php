@@ -1,7 +1,3 @@
-<?php
-require('model.php');
-$req = getProduits();
-?>
 
 <!DOCTYPE html>
 <html>
@@ -12,7 +8,10 @@ $req = getProduits();
 </head>
 
 <body>
-<?php require('header.php'); ?>
+<?php 
+require('header.php'); 
+$req = getProduits();
+?>
 
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Produits</span></h1>
