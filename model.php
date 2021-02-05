@@ -38,6 +38,16 @@ function getCadeau(){
 	return $req;
 }
 
+function getClientFromLogin($login){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT id_client FROM utilisateur WHERE nom_utilisateur = ?');
+	$req->execute(array($login));
+
+	$clientfromlogin = $req->fetch();
+
+	return $clientfromlogin;
+}
+
 function getClients(){
     $db = dbConnect();
     $req = $db->prepare('SELECT * FROM client');
