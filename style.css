@@ -240,3 +240,18 @@ input[type=submit]:hover {
   color: black;
   
 }
+
+.bouton_catalogue a {
+  color: #f2f2f2;
+  font-size: 17px;
+  background-color: #914c69;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.40);
+}
+
+.bouton_catalogue a:hover {
+  background-color: #ddd;
+  color: black;
+}
