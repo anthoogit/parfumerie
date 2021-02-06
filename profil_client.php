@@ -22,7 +22,7 @@ require('model.php');*/
 	</form><br/><br/>
 	
 	<div class="modif">
-		<a href="edit-client.php?id=<?php echo $_GET["client_id"]; ?>" >Editer la fiche client</a>
+		<a href="edit-client.php?client_id=<?php echo $_GET["client_id"]; ?>" >Editer la fiche client</a>
 	</div><br/><br/><br/>
 
 	<?php
