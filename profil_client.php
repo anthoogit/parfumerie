@@ -19,9 +19,11 @@ require('model.php');*/
 		<label for="client_id">ID Client</label>
 		<input type="text" name="client_id" id="client_id" />
 		<input type="submit" value="Valider" />
-	</form>
+	</form><br/><br/>
 	
-	<a href="edit-client.php?id=<?php echo $_GET["client_id"]; ?>" >Editer la fiche client</a>
+	<div class="modif">
+		<a href="edit-client.php?id=<?php echo $_GET["client_id"]; ?>" >Editer la fiche client</a>
+	</div><br/><br/><br/>
 
 	<?php
 	if (isset($_GET["client_id"])){
