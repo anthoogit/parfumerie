@@ -220,3 +220,23 @@ input[type=submit]:hover {
   cursor: pointer;
   width: auto;
 }
+
+.modif a {
+  color: #f2f2f2;
+  font-size: 17px;
+  background-color: #914c69;
+  text-decoration: none;
+  padding: 14px 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.40);
+  margin: 0 0 0 520px;
+  
+  
+}
+
+/* Change the color of links on hover */
+.modif a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
