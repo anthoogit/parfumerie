@@ -1,8 +1,17 @@
 <?php
-session_start();
-require('model.php');
-$req = getProduits();
+require('header.php');
+$req = getCadeau();
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clients</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
 
 <h3>Cadeaux</h3>
 <p>
@@ -36,3 +45,9 @@ $req = getProduits();
 	</table>
 </p>
 </div>
+
+
+
+<?php require('footer.php'); ?>
+</body>
+</html>
