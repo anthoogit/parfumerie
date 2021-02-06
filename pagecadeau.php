@@ -13,7 +13,8 @@ $req = getCadeau();
 
 <body>
 
-<h3>Cadeaux</h3>
+<div id="bloc_page">
+	<h1 class="titre_principal"><span>Cadeaux</span></h1>
 <p>
 	<table>
 		<thead>
