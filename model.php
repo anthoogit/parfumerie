@@ -125,3 +125,12 @@ function setUser($lo, $pd, $cc){
 	return $req;
 
 }
+
+function editClient($n, $p, $ad, $fb, $insta, $m, $tel, $cc){
+	$db = dbConnect();
+	$req = $db->prepare("UPDATE Client SET nom=?, prenom=?, adresse=?, facebook=?, instagram=?, email=?, numeroTel=? WHERE CodeClient=?");
+	$req->execute(array($n, $p, $ad, $fb, $insta, $m, $tel, $cc));
+
+	return $req;
+
+}
