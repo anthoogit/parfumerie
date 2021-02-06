@@ -26,10 +26,10 @@
 			
 			// afficher un message
 			echo "<h2>Vous avez ".$client['nbPoints']." points !</h2><br/>";
-			echo '<a href="pagecadeau.php">Voir le catalogue de cadeaux</h2><br/><br/>';
+			echo '<div class="bouton_catalogue"><a href="pagecadeau.php">Voir le catalogue de cadeaux</a></div><br/><br/>';
 		}
 	} else {
-		echo "Connectez-vous pour accéder au large choix de cadeaux !<br/>";
+		echo "Connectez-vous pour accéder au large choix de cadeaux !<br/><br/>";
 	}
 	?>
 
