@@ -57,7 +57,7 @@ require('model.php');*/
 				<?php
 				$req = getCommandesClient($client_id);
 				while ($commande = $req->fetch()){
-					echo '<li><a href="commande.php?commande_id=' . $commande["noCommande"] . '">' . $commande["noCommande"] . ' - '. $commande["dateCommande"] . '</a></li>';
+					echo '<li><a href="info-commande.php?commande_id=' . $commande["noCommande"] . '">' . $commande["noCommande"] . ' - '. $commande["dateCommande"] . '</a></li>';
 				}
 				?>
 				</ul>
@@ -86,7 +86,7 @@ require('model.php');*/
 					?>
 
 						<tr>
-							<td><?= '<a href="commande.php?commande_id=' . $commande["noCommande"] . '">' . $commande["noCommande"] . '</a>' ?></td>
+							<td><?= '<a href="info-commande.php?commande_id=' . $commande["noCommande"] . '">' . $commande["noCommande"] . '</a>' ?></td>
 							<td><?= $commande['dateCommande'] ?></td>
 							<td><?= $commande['etatCommande'] ?></td>
 						</tr>

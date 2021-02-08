@@ -35,8 +35,9 @@
 
 	<a href="produits.php">Produits (à afficher que pour l'admin)</a><br/>
 	<a href="clients.php">Clients (à afficher que pour l'admin)</a><br/>
+	<a href="commandes.php">Commandes (à afficher que pour l'admin)</a><br/>
 	<a href="profil_client.php?client_id=1">Profil client (A DEPLACER DANS CLIENTS.PHP)</a><br/>
-	<a href="commande.php">Info commande (refaire une page où on aurait tte la liste + option de rechercher par ID)</a><br/>
+	<a href="info-commande.php?commande_id=1">Info commande (//refaire une page où on aurait tte la liste + option de rechercher par ID)</a><br/>
 </div>
 
 <?php require('footer.php'); ?>

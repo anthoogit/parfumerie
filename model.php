@@ -134,3 +134,11 @@ function editClient($n, $p, $ad, $fb, $insta, $m, $tel, $cc){
 	return $req;
 
 }
+
+function getCommandes(){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT * FROM commande');
+    $req->execute(array());
+
+	return $req;
+}

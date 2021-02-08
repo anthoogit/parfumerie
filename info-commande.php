@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Mon profil</title>
+	<title>Info commande</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -12,11 +12,6 @@
 
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Infos commande</span></h1>
-	<form action="" method="GET">
-		<label for="commande_id">ID Commande</label>
-		<input type="text" name="commande_id" id="commande_id" />
-		<input type="submit" value="Valider" />
-	</form>
 
 	<?php
 	if (isset($_GET["commande_id"])){
