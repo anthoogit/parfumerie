@@ -13,6 +13,16 @@
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Infos commande</span></h1>
 
+	<form action="" method="GET">
+		<label for="commande_id">ID Commande</label>
+		<input type="text" name="commande_id" id="commande_id" />
+		<input type="submit" value="Valider" />
+	</form><br/><br/>
+
+	<div class="modif">
+		<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
+	</div><br/><br/><br/>
+
 	<?php
 	if (isset($_GET["commande_id"])){
 		$commande_id = $_GET["commande_id"];
@@ -30,6 +40,7 @@
 					<?= "nbPoints : " . $commande["nbPoints"]; ?><br />
 					<?= "prixTotal : " . $commande["prixTotal"]; ?><br />
 					<?= "numColis : " . $commande["numColis"]; ?><br />
+					<?= "dateExpedition : " . $commande["dateExpedition"]; ?><br />
 					<?= "dateArrivee : " . $commande["dateArrivee"]; ?><br />
 					<?= "datePaiement : " . $commande["datePaiement"]; ?><br />
 					<?= "fraisService : " . $commande["fraisService"]; ?><br />
