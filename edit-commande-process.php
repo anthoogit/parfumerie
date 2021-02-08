@@ -13,15 +13,15 @@ if(isset($_POST['submit_edit_commande'])){  //Vérification des données en POST
 	$edit_dateExpedition = $_POST['dateExpedition'];
 	$edit_dateArrivee = $_POST['dateArrivee'];
 	$edit_datePaiement = $_POST['datePaiement'];
+	$edit_fraisLivraison = $_POST['fraisLivraison'];
 	$edit_fraisService = $_POST['fraisService'];
 	$edit_promotion = $_POST['promotion'];
-	$edit_user_telephone = $_POST['fraisService'];
-    $edit_codeClient = $_POST['codeClients'];
+    $edit_codeClient = $_POST['codeClient'];
 
     //----------Insertion des infos du nouvel utilisateur---------------//
 
     try{
-        editCommande($edit_dateCommande, $edit_etatCommande, $edit_nbPoints, $edit_prixTotal, $edit_numColis, $edit_dateExpedition, $edit_dateArrivee, $edit_datePaiement, $edit_fraisService, $edit_promotion, $edit_codeClient, $no_commande);
+        editCommande($edit_dateCommande, $edit_etatCommande, $edit_nbPoints, $edit_prixTotal, $edit_numColis, $edit_dateExpedition, $edit_dateArrivee, $edit_datePaiement, $edit_fraisLivraison, $edit_fraisService, $edit_promotion, $edit_codeClient, $no_commande);
         } catch (PDOException $e) {
             echo 'Error: ' . $e->getMessage();
         }

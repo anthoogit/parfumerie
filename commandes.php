@@ -14,7 +14,7 @@ $req = getCommandes();
 ?>
 
 <div id="bloc_page">
-	<h1 class="titre_principal"><span>Infos commande</span></h1>
+	<h1 class="titre_principal"><span>Commandes</span></h1>
 
 	<p>
 		<table>

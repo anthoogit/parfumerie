@@ -134,10 +134,10 @@ function editClient($n, $p, $ad, $fb, $insta, $m, $tel, $cc){
 	return $req;
 }
 
-function editCommande($d, $e, $p, $pt, $nc, $de, $da, $dp, $f, $promo, $c, $n){
+function editCommande($d, $e, $p, $pt, $nc, $de, $da, $dp, $fl, $fs, $promo, $c, $n){
 	$db = dbConnect();
-	$req = $db->prepare("UPDATE commande SET dateCommande=?, etatCommande=?, nbPoints=?, prixTotal=?, numColis=?, dateExpedition=?, dateArrivee=?, datePaiement=?, fraisLivraison=?, fraisService=?, promotion=? WHERE noCommande=?");
-	$req->execute(array($d, $e, $p, $pt, $nc, $de, $da, $dp, $f, $promo, $c, $n));
+	$req = $db->prepare("UPDATE commande SET dateCommande=?, etatCommande=?, nbPoints=?, prixTotal=?, numColis=?, dateExpedition=?, dateArrivee=?, datePaiement=?, fraisLivraison=?, fraisService=?, promotion=?, codeClient=? WHERE noCommande=?");
+	$req->execute(array($d, $e, $p, $pt, $nc, $de, $da, $dp, $fl, $fs, $promo, $c, $n));
 
 	return $req;
 }
