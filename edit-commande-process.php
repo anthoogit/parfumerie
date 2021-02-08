@@ -18,7 +18,7 @@ if(isset($_POST['submit_edit_commande'])){  //Vérification des données en POST
 	$edit_promotion = $_POST['promotion'];
     $edit_codeClient = $_POST['codeClient'];
 
-    //----------Insertion des infos du nouvel utilisateur---------------//
+    //----------Insertion des infos de la nouvelle commande---------------//
 
     try{
         editCommande($edit_dateCommande, $edit_etatCommande, $edit_nbPoints, $edit_prixTotal, $edit_numColis, $edit_dateExpedition, $edit_dateArrivee, $edit_datePaiement, $edit_fraisLivraison, $edit_fraisService, $edit_promotion, $edit_codeClient, $no_commande);

@@ -52,7 +52,7 @@ if(isset($_GET['success'])){
 		<?php
 		}
 		else{
-			echo '<p>Code client inexistant</p>';
+			echo '<p>no Commande inexistant</p>';
 		}
 	}
 	?>
