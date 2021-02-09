@@ -108,6 +108,14 @@ function getProduitsCommande($commande_id){
 	return $req;
 }
 
+function getCadeauxCommande($commande_id){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT nomCadeau, quantite, cadeau_commande.prixFidelite FROM cadeau_commande INNER JOIN cadeau ON cadeau_commande.noCadeau = cadeau.noCadeau WHERE noCommande = ?');
+	$req->execute(array($commande_id));
+
+	return $req;
+}
+
 function setClient($cc, $n, $p, $ad, $fb, $insta, $m, $tel){
 	$db = dbConnect();
 	$req = $db->prepare("INSERT INTO Client (CodeClient, nom, prenom, adresse, facebook, instagram, email, numeroTel) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
@@ -156,5 +164,4 @@ function deleteCommande($commande_id){
     $req->execute(array($commande_id));
     $req2 = $db->prepare('DELETE FROM commande WHERE noCommande=?');
     $req2->execute(array($commande_id));
-	header('location: profil_client.php');
 }

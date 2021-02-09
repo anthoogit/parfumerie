@@ -55,6 +55,7 @@ if(isset($_GET['success'])){
 		if (verifCommande_ID($commande_id)){
 			$commande = getCommande($commande_id);
 			$req_produits = getProduitsCommande($commande_id);
+			$req_cadeaux = getCadeauxCommande($commande_id)
 		?>
 
 		<div class="container">
@@ -85,6 +86,14 @@ if(isset($_GET['success'])){
 						<?= "Produit : " . $produit["nom"] ?><br />
 						<?= "Quantité : " . $produit["quantite"] ?><br />
 						<?= "Prix d'achat : " . $produit["prixAchat"] . "€" ?><br />
+						<p>----</p>
+					<?php
+					}
+					while ($cadeau = $req_cadeaux->fetch()) {
+					?>
+						<?= "cadeau : " . $cadeau["nomCadeau"] ?><br />
+						<?= "Quantité : " . $cadeau["quantite"] ?><br />
+						<?= "Nb point : " . $cadeau["prixFidelite"] . " points" ?><br />
 						<p>----</p>
 					<?php
 					}
