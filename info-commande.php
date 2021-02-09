@@ -31,15 +31,9 @@ if(isset($_GET['success'])){
 	 	if($_SESSION['loggedin'] && $_SESSION['loggedin'] == true){
 			if($_SESSION['username'] == "admin"){
 				?>
-				<div class="container">
-					<div class="modif">
-						<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
-					</div>
-					<div class="modif">
-						<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
-					</div>
-				</div>
-				<br/><br/><br/>
+				<div class="modif">
+				<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
+				</div><br/><br/><br/>
 	<?php
 			}
 		}
