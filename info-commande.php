@@ -49,7 +49,7 @@
 				</p>
 			</div>
 			<div class="colonne_aside">
-				<h3 class="titre_orange">Produit commandés :</h3>
+				<h3 class="titre_orange">Produits commandés :</h3>
 				<p>
 					<?php
 					$prixTotal = 0;
