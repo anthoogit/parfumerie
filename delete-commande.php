@@ -13,6 +13,7 @@ require('header.php');
 if (isset($_POST['confirm'])){
     $commande_id = $_POST["commande_id"];
     deleteCommande($commande_id);
+    header('location: profil_client.php?client_id='.$id_client['id_client'].'');
 }
 ?>
 

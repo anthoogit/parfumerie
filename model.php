@@ -152,6 +152,9 @@ function getCommandes(){
 
 function deleteCommande($commande_id){
 	$db = dbConnect();
-    $req = $db->prepare('DELETE FROM commande WHERE noCommande=?');
+	$req = $db->prepare('DELETE FROM produit_commande WHERE noCommande=?');
     $req->execute(array($commande_id));
+    $req2 = $db->prepare('DELETE FROM commande WHERE noCommande=?');
+    $req2->execute(array($commande_id));
+	header('location: profil_client.php');
 }
