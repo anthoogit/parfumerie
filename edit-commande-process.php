@@ -18,6 +18,7 @@ if(isset($_POST['submit_edit_commande'])){  //Vérification des données en POST
 	$edit_promotion = $_POST['promotion'];
     $edit_codeClient = $_POST['codeClient'];
 
+	$db = dbConnect();
     //----------Insertion des infos de la nouvelle commande---------------//
 
     try{

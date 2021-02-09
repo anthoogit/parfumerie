@@ -23,24 +23,23 @@ if(isset($_POST['submit_new_user'])){  //Vérification des données en POST
 	$db = dbConnect();
 	$req = $db->prepare("SELECT noCommande FROM commande WHERE noCommande='$new_noCommande'");
 	$req->execute(array());
-	$duplicate_codeclient = $req->fetch();
+	$duplicate_noCommande = $req->fetch();
 
 	$req = $db->prepare("SELECT numColis FROM commande WHERE numColis='$new_numColis'");
 	$req->execute(array());
-	$duplicate_login = $req->fetch();
+	$duplicate_numColis = $req->fetch();
 
-	if($duplicate_codeclient){
+	if($duplicate_noCommande){
 		header("location: new-commande.php?error=duplicate_noCommande");
-	} else if($duplicate_login) {
+	} else if($duplicate_numColis) {
 		header("location: new-commande.php?error=duplicate_numColis");
 	} else {
-		//----------Insertion des infos du nouvel utilisateur---------------//
+		//----------Insertion des infos de la nouvelle commande---------------//
 
 		try{
             setCommande($new_noCommande, $new_nbPoint, $new_prixTotal, $new_numColis, $new_fraisLivraison, $new_fraisService, $new_promotion, $new_codeClient);
 
-			// setClient($new_user_codeclient, $new_user_nom, $new_user_prenom, $new_user_adresse, $new_user_facebook, $new_user_instagram, $new_user_email, $new_user_telephone);
-			// setUser($new_user_login, $new_user_mdp, $new_user_codeclient);
+			// setProduit_Commande ?
 			} catch (PDOException $e) {
 				echo 'Error: ' . $e->getMessage();
 			}
