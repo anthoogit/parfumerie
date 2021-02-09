@@ -16,6 +16,12 @@ $req = getCommandes();
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Commandes</span></h1>
 
+	<form action="info-commande.php" method="GET">
+		<label for="commande_id">ID Commande</label>
+		<input type="text" name="commande_id" id="commande_id" />
+		<input type="submit" value="Valider" />
+	</form><br/><br/>
+
 	<p>
 		<table>
 			<thead>
