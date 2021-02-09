@@ -57,7 +57,7 @@ if(isset($_GET['error'])){
             $req = getClients();
             while ($client = $req->fetch()){
                 ?>
-                <option value="<?= $client["CodeClient"] ?>"><?= $client["CodeClient"] ?></option>
+                <option value="<?= $client["CodeClient"] ?>"><?= $client["CodeClient"]." - ".$client['nom']." ".$client['prenom'] ?></option>
                 <?php
             }
             ?>
