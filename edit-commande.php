@@ -23,7 +23,7 @@ if(isset($_GET['success'])){
 	<?php
 	if (isset($_GET["commande_id"])){
 		$commande_id = $_GET["commande_id"];
-		if (verifClient_ID($commande_id)){
+		if (verifCommande_ID($commande_id)){
 			$commande = getCommande($commande_id);
 		?>
 
