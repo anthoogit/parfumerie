@@ -122,7 +122,6 @@ function setClient($cc, $n, $p, $ad, $fb, $insta, $m, $tel){
 	$req->execute(array($cc, $n, $p, $ad, $fb, $insta, $m, $tel));
 
 	return $req;
-
 }
 
 function setUser($lo, $pd, $cc){
@@ -131,7 +130,14 @@ function setUser($lo, $pd, $cc){
 	$req->execute(array($lo, $pd, $cc));
 
 	return $req;
+}
 
+function setCommande($noCommande, $nbP, $pt, $numC, $fl, $fs, $promo, $cc){
+	$db = dbConnect();
+	$req = $db->prepare("INSERT INTO Commande (noCommande, dateCommande, etatCommande, nbPoints, prixTotal, numColis, fraisLivraison, fraisService, promotion, codeClient) VALUES (?, DATE(NOW()), 0, ?, ?, ?, ?, ?, ?, ?)");
+	$req->execute(array($noCommande, $nbP, $pt, $numC, $fl, $fs, $promo, $cc));
+
+	return $req;
 }
 
 function editClient($n, $p, $ad, $fb, $insta, $m, $tel, $cc){

@@ -13,6 +13,12 @@ require('header.php');
 $req = getCommandes();
 ?>
 
+<div>
+	<div class="btntop">
+		<a class="bouton" href="new-commande.php" >Créer une nouvelle commande</a>
+	</div>
+</div>
+
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Commandes</span></h1>
 
