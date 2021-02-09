@@ -32,7 +32,6 @@
 				echo '<div class="bouton_catalogue"><a href="produits.php">Produits [ADMIN ONLY]</a></div><br/><br/>';
 				echo '<div class="bouton_catalogue"><a href="clients.php">Clients [ADMIN ONLY]</a></div><br/><br/>';
 				echo '<div class="bouton_catalogue"><a href="commandes.php">Commandes [ADMIN ONLY]</a></div><br/><br/>';
-				echo '<div class="bouton_catalogue"><a href="profil_client.php?client_id=1">Profil client (A DEPLACER DANS CLIENTS.PHP)</a></div><br/><br/>';
 				echo '<div class="bouton_catalogue"><a href="info-commande.php?commande_id=1">Info commande</a></div><br/>';
 			}
 		
