@@ -8,7 +8,14 @@
 </head>
 
 <body>
-<?php require('header.php'); ?>
+<?php 
+require('header.php'); 
+if(isset($_GET['success'])){
+	if($_GET['success'] == true){
+		echo '<script>alert("La commande a bien été modifié !")</script>';
+	}
+}
+?>
 
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Infos commande</span></h1>
