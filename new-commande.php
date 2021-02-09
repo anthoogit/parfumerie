@@ -42,7 +42,7 @@ if(isset($_GET['error'])){
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Créer une nouvelle commande</span></h1>
 
-	<form action="new-commande-process.php" method="GET">
+	<form action="new-commande-process.php" method="POST">
 		<p>* indique qu'un champ est obligatoire</p>
 		<p>*noCommande: <input type="text" name="noCommande" required></p>
 		<p>*nbPoint: <input type="number" name="nbPoint" required></p>
@@ -50,8 +50,8 @@ if(isset($_GET['error'])){
 		<p>*fraisLivraison: <input type="number" step=".01" name="fraisLivraison" required></p>
 		<p>*fraisService: <input type="number" step=".01" name="fraisService" required></p>
 		<p>*promotion: <input type="number" step=".01" name="promotion" required></p>
-		<p>*codeClient:
-        <select name="CodeClient">
+		<!-- <p>*codeClient: <input type="number" name="codeClient" required></p> -->
+        <select name="codeClient" required>
 			<option value="">-- Choisir un client</option>
             <?php
             $req = getClients();
