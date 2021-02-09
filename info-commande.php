@@ -26,9 +26,20 @@ if(isset($_GET['success'])){
 		<input type="submit" value="Valider" />
 	</form><br/><br/>
 
-	<div class="modif">
-		<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
-	</div><br/><br/><br/>
+	<?php
+	 if(isset($_SESSION['loggedin'])){
+	 	if($_SESSION['loggedin'] && $_SESSION['loggedin'] == true){
+			if($_SESSION['username'] == "admin"){
+				?>
+				<div class="modif">
+				<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
+				</div><br/><br/><br/>
+	<?php
+			}
+		}
+	}
+	?>
+	
 
 	<?php
 	if (isset($_GET["commande_id"])){
