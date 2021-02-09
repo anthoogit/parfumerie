@@ -20,21 +20,29 @@ if(isset($_GET['success'])){
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Infos commande</span></h1>
 
-	<form action="" method="GET">
-		<label for="commande_id">ID Commande</label>
-		<input type="text" name="commande_id" id="commande_id" />
-		<input type="submit" value="Valider" />
-	</form><br/><br/>
 
 	<?php
 	 if(isset($_SESSION['loggedin'])){
 	 	if($_SESSION['loggedin'] && $_SESSION['loggedin'] == true){
 			if($_SESSION['username'] == "admin"){
 				?>
+				<form action="" method="GET">
+					<label for="commande_id">ID Commande</label>
+					<input type="text" name="commande_id" id="commande_id" />
+					<input type="submit" value="Valider" />
+				</form><br/><br/>
+
 				<div class="modif">
-					<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
+					<a href="edit-commande.php?commande_id=<?= $_GET["commande_id"]; ?>" >Editer la commande</a>
 				</div><br/><br/><br/>
+				<form action="delete-commande.php" method="POST">
+					<input type="hidden" name="commande_id" value="<?= $_GET["commande_id"]; ?>" required />
+					<input type="submit" name="supprimer" value="Supprimer la commande" />
+				</form><br/><br/>
 	<?php
+				if (isset($_POST['supprimer'])){
+					echo $_POST['commande_id'];
+				}
 			}
 		}
 	}

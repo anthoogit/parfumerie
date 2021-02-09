@@ -149,3 +149,9 @@ function getCommandes(){
 
 	return $req;
 }
+
+function deleteCommande($commande_id){
+	$db = dbConnect();
+    $req = $db->prepare('DELETE FROM commande WHERE noCommande=?');
+    $req->execute(array($commande_id));
+}
