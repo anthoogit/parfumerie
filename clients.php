@@ -23,6 +23,12 @@ $req = getClients();
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Liste des clients</span></h1>
 
+	<form action="profil_client.php" method="GET">
+		<label for="client_id">ID Client</label>
+		<input type="text" name="client_id" id="client_id" />
+		<input type="submit" value="Valider" />
+	</form><br/><br/>
+
 	<table>
 		<thead>
 			<tr>
