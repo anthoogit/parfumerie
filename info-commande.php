@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Info commande</title>
+	<title>Infos commande</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -32,7 +32,7 @@ if(isset($_GET['success'])){
 			if($_SESSION['username'] == "admin"){
 				?>
 				<div class="modif">
-				<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
+					<a href="edit-commande.php?commande_id=<?php echo $_GET["commande_id"]; ?>" >Editer la commande</a>
 				</div><br/><br/><br/>
 	<?php
 			}
