@@ -26,6 +26,7 @@
 		$client_id = $_GET["client_id"];
 		if (verifClient_ID($client_id)){
 			$client = getclient($client_id);
+			$grade = getMemberShip($client["id_membership"]);
 		?>
 
 		<div class="container">
@@ -41,7 +42,7 @@
 					<?= "email : " . $client["email"]; ?><br />
 					<?= "numeroTel : " . $client["numeroTel"]; ?><br />
 					<?= "nbPoints : " . $client["nbPoints"]; ?><br />
-					<?= "id_membership : " . $client["id_membership"]; ?><br />
+					<?= "Membership : ". $grade["nom"]; ?><br />
 					<?= "dateExpiration : " . $client["dateExpiration"]; ?><br />
 				</p>
 			</div>

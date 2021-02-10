@@ -212,3 +212,21 @@ function getClientInfo_invoice($commande_id){
 
 	return $clientinfo;
 }
+
+function getMemberShip($id_membership){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT nom FROM membership WHERE id = ?');
+	$req->execute(array($id_membership));
+	
+	$membership = $req->fetch();
+
+	return $membership;
+}
+
+function setCadeau($nc, $n, $p, $m, $s){
+	$db = dbConnect();
+	$req = $db->prepare("INSERT INTO Cadeau (noCadeau, nomCadeau, prixFidelite, niveauMembership, stock) VALUES (?, ?, ?, ?, ?)");
+	$req->execute(array($nc, $n, $p, $m, $s));
+
+	return $req;
+}

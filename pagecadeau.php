@@ -13,6 +13,12 @@ $req = getCadeau();
 
 <body>
 
+<div>
+	<div class="btntop">
+		<a class="bouton" href="new-cadeau.php" >Créer une nouvelle fiche cadeau</a>
+	</div>
+</div>
+
 <div id="bloc_page">
 	<h1 class="titre_principal"><span>Cadeaux</span></h1>
 <p>
