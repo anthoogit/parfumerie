@@ -73,7 +73,13 @@ if(isset($_GET['success'])){
 					<?= "fraisService : " . $commande["fraisService"]; ?><br />
 					<?= "promotion : " . $commande["promotion"]; ?><br />
 					<?= "codeClient : " . $commande["codeClient"]; ?><br />
-				</p>
+				</p><br/>
+
+				<form action="facture.php" method="POST">
+					<input type="hidden" name="commande_id" value="<?= $_GET["commande_id"]; ?>" required />
+					<input type="submit" name="invoice" value="Générer la facture" />
+				</form>
+
 			</div>
 			<div class="colonne_aside">
 				<h3 class="titre_orange">Produits commandés :</h3>

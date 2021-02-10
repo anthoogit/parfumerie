@@ -171,3 +171,44 @@ function deleteCommande($commande_id){
     $req2 = $db->prepare('DELETE FROM commande WHERE noCommande=?');
     $req2->execute(array($commande_id));
 }
+
+function verifFacture_ID($commande_id){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT COUNT(*) AS nb FROM facture WHERE noCommande = ?');
+	$req->execute(array($commande_id));
+
+	$res = $req->fetch();
+	if($res['nb'] == 1){
+		return true;
+	}
+	else
+		return false;
+}
+
+function setFacture($ci, $current_date){
+	$db = dbConnect();
+	$req = $db->prepare("INSERT INTO facture (noFacture, dateFacture, noCommande) VALUES (?, ?, ?)");
+	$req->execute(array($ci, $current_date, $ci));
+
+	return $req;
+}
+
+function getFacture($commande_id){
+	$db = dbConnect();
+    $req = $db->prepare('SELECT * FROM facture WHERE noCommande = ?');
+	$req->execute(array($commande_id));
+	
+	$facture = $req->fetch();
+
+	return $facture;
+}
+
+function getClientInfo_invoice($commande_id){
+	$db = dbConnect();
+	$req = $db->prepare('SELECT * FROM client WHERE CodeClient = (SELECT codeClient FROM commande WHERE noCommande = ?)');
+	$req->execute(array($commande_id));
+
+	$clientinfo = $req->fetch();
+
+	return $clientinfo;
+}
