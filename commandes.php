@@ -28,6 +28,10 @@ $req = getCommandes();
 		<input type="submit" value="Valider" />
 	</form><br/><br/>
 
+	<div class="modif">
+		<a href="list-commandes-csv.php" >Exporter les commandes en .CSV</a>
+	</div><br/>
+
 	<p>
 		<table>
 			<thead>
